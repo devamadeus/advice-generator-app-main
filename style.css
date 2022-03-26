@@ -3,7 +3,6 @@ body {
   background-color: #1f2632;
   font-family: 'Manrope', sans-serif;
   font-size: 14px;
-  line-height: 20px;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -14,24 +13,62 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100vw;
 }
 
-.content {
+main {
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 600px;
-  height: 300px;
-  border-radius: 20px;
   margin: 0 auto;
+  width: 40%;
+  min-width: 375px;
+  height: 30%;
+  border-radius: 15px;
   padding: 20px;
   background-color: #323a49;
+  box-sizing: border-box;
 }
-.advice {
+
+#advice-id {
   color: #52ffa8;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-top: 5px;
+}
+#advice-text {
+  font-size: 1.5em;
+  line-height: 1.6em;
+  color: #cee3e9;
+  flex-grow: 1;
+  margin-top: 20px;
+  text-align: center;
+}
+.divider {
+  position: absolute;
+  bottom: 20%;
+}
+.dice {
+  position: absolute;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background-color: #52ffa8;
+  padding: 15px;
+  top: 90%;
+}
+.dice:hover {
+  position: absolute;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background-color: #52ffa8;
+  box-shadow: 0 0 10px #52ffa8, 0 0 40px #52ffa8;
+  cursor: pointer;
+  padding: 15px;
+  top: 90%;
 }
 
 footer {
@@ -41,7 +78,7 @@ footer {
   width: 100%;
 }
 .attribution {
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
 }
 .attribution a {
