@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+  --accent: #52ffa8;
+}
+
 body {
   background-color: #1f2632;
   font-family: 'Manrope', sans-serif;
@@ -6,8 +11,8 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
-
 .wrapper {
   display: flex;
   align-items: center;
@@ -15,7 +20,6 @@ body {
   height: 100vh;
   width: 100vw;
 }
-
 main {
   position: relative;
   display: flex;
@@ -24,53 +28,50 @@ main {
   justify-content: center;
   margin: 0 auto;
   width: 40%;
-  min-width: 375px;
+  min-width: 570px;
   height: 30%;
   border-radius: 15px;
   padding: 20px;
   background-color: #323a49;
   box-sizing: border-box;
 }
-
 #advice-id {
-  color: #52ffa8;
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-top: 5px;
 }
 #advice-text {
-  font-size: 1.5em;
-  line-height: 1.6em;
   color: #cee3e9;
   flex-grow: 1;
-  margin-top: 20px;
+  margin-top: 7%;
   text-align: center;
 }
+#advice-text q {
+  font-size: 28px;
+}
 .divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+img.desktop {
   position: absolute;
   bottom: 20%;
+}
+img.mobile {
+  display: none;
 }
 .dice {
   position: absolute;
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  background-color: #52ffa8;
+  background-color: var(--accent);
   padding: 15px;
   top: 90%;
 }
-.dice:hover {
-  position: absolute;
-  border-radius: 50%;
-  height: 25px;
-  width: 25px;
-  background-color: #52ffa8;
-  box-shadow: 0 0 10px #52ffa8, 0 0 40px #52ffa8;
-  cursor: pointer;
-  padding: 15px;
-  top: 90%;
-}
-
 footer {
   position: fixed;
   padding: 20px;
@@ -82,6 +83,55 @@ footer {
   text-align: center;
 }
 .attribution a {
-  color: #52ffa8;
+  color: var(--accent);
   text-decoration: none;
+}
+
+@media (hover: hover) {
+  .dice:hover {
+    position: absolute;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    background-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent), 0 0 40px var(--accent);
+    cursor: pointer;
+    padding: 15px;
+    top: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 40%;
+    min-width: 330px;
+    height: 40%;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #323a49;
+    box-sizing: border-box;
+  }
+  img.desktop {
+    display: none;
+  }
+  img.mobile {
+    display: block;
+    position: absolute;
+    bottom: 20%;
+  }
+  #advice-text {
+    color: #cee3e9;
+    flex-grow: 1;
+    margin-top: 12%;
+    text-align: center;
+  }
+  #advice-text q {
+    font-size: 18px;
+  }
 }
